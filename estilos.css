@@ -1,0 +1,131 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #5cb873;
+  cursor: url('recursos/mouse.png'), auto;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.board {
+  width: 334px;
+  height: 338px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  background-image: url("recursos/tablero.png");
+  user-select: none;
+  cursor: default;
+  cursor: url('recursos/mouse.png'), auto;
+  overflow: visible; 
+  grid-column: 3 / 12;
+  grid-row: 4 / 4;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  user-select: none;
+  cursor: url('recursos/mouse.png'), auto;
+  overflow: visible;
+}
+
+
+.cell.pollito {
+  margin-top: 60px;
+  margin-left: -25px;
+  background-image: url('recursos/xdt.gif');
+  animation: playerAnimation 1s;
+  transform: scale(1.6);
+  transform-origin: center;
+  z-index: 10;
+}
+
+.cell.pollito.animacion-terminada {
+  margin-top: 60px;
+  margin-left: -25px;
+  background-image: url('recursos/pollillo-webot.png');
+  animation: none;
+}
+
+
+.cell.polloPC {
+  margin-top: 60px;
+  margin-left: -25px;
+  background-image: url('/recursos/don-pollo.gif');
+  animation: pcAnimation 1s;
+  transform: scale(1.6); 
+  transform-origin: center;
+  z-index: 10;
+}
+
+.cell.polloPC.animacion-terminada {
+  margin-top: 60px;
+  margin-left: -25px;
+  background-image: url('recursos/don-pollo-webo.png');
+  animation: none;
+}
+
+.bordes {
+  display: grid;
+
+  grid-template-columns: repeat(27, 40px);
+  grid-template-rows: repeat(14, 40px);
+  width: 1064px;
+  height: 540px;
+  background-image: url(/recursos/bordes.png);
+}
+
+.puntuacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 532px;
+  height: 330px;
+  background-image: url('/recursos/mensaje.png');
+  grid-column: 12 / 12;
+  grid-row: 13 / 4;
+}
+
+#derrotas{
+  color: #b4956d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 19px;
+  background-color: #e8cfa6;
+  margin: 12px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 9px;
+}
+#victorias{
+  color: #b4956d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 133px;
+  height: 19px;
+  background-color: #e8cfa6;
+  margin: 12px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 9px;
+}
+#empates{
+  color: #b4956d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 19px;
+  background-color: #e8cfa6;
+  margin: 12px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 9px;
+}
